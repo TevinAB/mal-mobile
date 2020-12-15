@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 $font: 'Nunito', sans-serif;
 $main-color: #2e51a2;
+$footer-color: #f0f3fa;
 $orange: #eb6100;
 $section-header-color: #d9dde1;
 $more-btn-color: #4a90e2;
@@ -15,6 +16,13 @@ $fade-text-color: #7a8ec0;
 html {
   scroll-behavior: smooth;
   font-family: $font;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
 }
 
 nav {
@@ -73,6 +81,10 @@ nav {
       border-radius: 3px;
     }
   }
+}
+
+.announcement-container {
+  margin-top: 51.2875px;
 }
 
 .section-header {
@@ -214,4 +226,104 @@ nav {
   color: white;
   font-size: 0.65rem;
   background-color: black;
+}
+
+footer {
+  background-color: $footer-color;
+
+  a {
+    color: $main-color;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .foot-nav-container {
+    border-bottom: 1px solid #e1e8f8;
+  }
+
+  .foot-nav {
+    width: 80%;
+    margin: 0 auto;
+    display: table;
+    padding: 0.25rem 0;
+
+    ul {
+      display: table-row;
+      li {
+        display: table-cell;
+        text-align: center;
+        padding: 0.5rem 0;
+      }
+    }
+  }
+  .support-mal {
+    padding: 0.5rem 0;
+    img {
+      margin: auto;
+      display: block;
+      width: 250px;
+      height: 36px;
+    }
+  }
+  .socials {
+    width: 70%;
+    margin: auto;
+    padding: 0.5rem 0;
+    .twitter {
+      float: right;
+      i {
+        color: #6aabdb;
+      }
+    }
+    i {
+      font-size: 1.4rem;
+      vertical-align: bottom;
+    }
+  }
+
+  .rec-sites {
+    position: relative;
+    border-top: 1px solid #e1e8f8;
+    border-bottom: 1px solid #e1e8f8;
+    display: table;
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+    margin-top: 0.5rem;
+
+    ul {
+      display: table-row;
+
+      li {
+        display: table-cell;
+        padding: 0.6rem 0.3rem;
+      }
+    }
+
+    p {
+      position: absolute;
+      top: -35%;
+      left: 50%;
+      z-index: 99;
+      transform: translate(-50%, 50%);
+      padding: 0 0.5rem;
+      background-color: $footer-color;
+      color: #7a7a7a;
+      font-size: 0.8rem;
+      user-select: none;
+    }
+  }
+
+  .req-desktop {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .copy-right {
+    background-color: $main-color;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.25rem 0;
+  }
 }
